@@ -15,4 +15,8 @@ o entryPoint.cmi : cp ../bs/src/entryPoint.cmi
 o entryPoint.cmj : cp ../bs/src/entryPoint.cmj
 o entryPoint.cmt : cp ../bs/src/entryPoint.cmt
 o entryPoint.res : cp ../../src/entryPoint.res
-build install.stamp : touch App.cmi App.cmj index.cmi index.cmj entryPoint.cmi entryPoint.cmj 
+o NameScreen.cmi : cp ../bs/src/screens/NameScreen.cmi
+o NameScreen.cmj : cp ../bs/src/screens/NameScreen.cmj
+o NameScreen.cmt : cp ../bs/src/screens/NameScreen.cmt
+o NameScreen.res : cp ../../src/screens/NameScreen.res
+build install.stamp : touch App.cmi App.cmj index.cmi index.cmj entryPoint.cmi entryPoint.cmj NameScreen.cmi NameScreen.cmj 

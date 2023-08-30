@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import LogoSvg from "./logo.svg";
+import * as NameScreen from "./screens/NameScreen.bs.js";
 
 import './App.css';
 ;
@@ -9,9 +10,7 @@ import './App.css';
 var logo = LogoSvg;
 
 function App(Props) {
-  return React.createElement("div", {
-              className: "App"
-            }, "yo");
+  return React.createElement(NameScreen.make, {});
 }
 
 var make = App;

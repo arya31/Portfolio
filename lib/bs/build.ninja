@@ -4,11 +4,11 @@ rule astj
   command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsc.exe  -warn-error +101 -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsb_helper.exe -hash d5e9381fd8a47c85f30b55e51ea2d336 $in
+  command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsb_helper.exe -hash 242ff69d6cc58cef3764938caaad4e55 $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsc.exe -I src -I /Users/aryashree.mazumder/portfolio/node_modules/@rescript/react/lib/ocaml   -warn-error +101 -bs-package-name portfolio -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsc.exe -I src/screens -I src -I /Users/aryashree.mazumder/portfolio/node_modules/@rescript/react/lib/ocaml   -warn-error +101 -bs-package-name portfolio -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
@@ -18,3 +18,6 @@ o src/index.cmj src/index.cmi ../../src/index.bs.js : mij src/index.ast
 o src/entryPoint.ast : astj ../../src/entryPoint.res
 o src/entryPoint.d : deps src/entryPoint.ast
 o src/entryPoint.cmj src/entryPoint.cmi ../../src/entryPoint.bs.js : mij src/entryPoint.ast
+o src/screens/NameScreen.ast : astj ../../src/screens/NameScreen.res
+o src/screens/NameScreen.d : deps src/screens/NameScreen.ast
+o src/screens/NameScreen.cmj src/screens/NameScreen.cmi ../../src/screens/NameScreen.bs.js : mij src/screens/NameScreen.ast

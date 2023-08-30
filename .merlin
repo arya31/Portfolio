@@ -7,4 +7,6 @@ S /Users/aryashree.mazumder/portfolio/node_modules/@rescript/react/lib/ocaml
 B /Users/aryashree.mazumder/portfolio/node_modules/@rescript/react/lib/ocaml
 S src
 B lib/bs/src
+S src/screens
+B lib/bs/src/screens
 ####BSB GENERATED: NO EDIT}
