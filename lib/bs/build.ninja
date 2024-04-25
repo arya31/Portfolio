@@ -4,7 +4,7 @@ rule astj
   command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsc.exe  -warn-error +101 -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsb_helper.exe -hash 242ff69d6cc58cef3764938caaad4e55 $in
+  command = /Users/aryashree.mazumder/portfolio/node_modules/rescript/darwin/bsb_helper.exe -hash 090d022b49fbed956c23441889a664a7 $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
@@ -18,6 +18,9 @@ o src/index.cmj src/index.cmi ../../src/index.bs.js : mij src/index.ast
 o src/entryPoint.ast : astj ../../src/entryPoint.res
 o src/entryPoint.d : deps src/entryPoint.ast
 o src/entryPoint.cmj src/entryPoint.cmi ../../src/entryPoint.bs.js : mij src/entryPoint.ast
+o src/screens/Navbar.ast : astj ../../src/screens/Navbar.res
+o src/screens/Navbar.d : deps src/screens/Navbar.ast
+o src/screens/Navbar.cmj src/screens/Navbar.cmi ../../src/screens/Navbar.bs.js : mij src/screens/Navbar.ast
 o src/screens/NameScreen.ast : astj ../../src/screens/NameScreen.res
 o src/screens/NameScreen.d : deps src/screens/NameScreen.ast
 o src/screens/NameScreen.cmj src/screens/NameScreen.cmi ../../src/screens/NameScreen.bs.js : mij src/screens/NameScreen.ast

@@ -4,8 +4,10 @@ import * as React from "react";
 
 function NameScreen(Props) {
   return React.createElement("div", {
-              className: "bg-black"
-            }, "yo");
+              className: "flex h-screen"
+            }, React.createElement("div", {
+                  className: "bg-black h-screen w-screen flex flex-col justify-center items-center text-white"
+                }, "yo"));
 }
 
 var make = NameScreen;
